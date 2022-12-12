@@ -1,7 +1,7 @@
 import java.util.Set;
 import java.util.TreeSet;
 
-public class TreeSet_default_natural_Sorting 
+public class TreeSet_default_natural_Sorting_with_Comparable 
 {
 	public static void main(String[] args) 
 	{
@@ -21,7 +21,17 @@ public class TreeSet_default_natural_Sorting
 		 * null and we can not compare with null so it gives NullPointerException at runtime.
 		 * 
 		 * Also we can not take Heterogeneous elements because while sorting we can not sort with integer
-		 * to String or vice-versa or with any element
+		 * to String or vice-versa or with any element.
+		 * 
+		 * For Default sorting there are two rules:
+		 * 			1) Elements should be homogeneous.
+		 * 			2) Elements should be comparable. ( should be like this c.add("A") but not 
+		 * 			   c.add(new StringBuffer("A")) Because String class implements Comparable(I) but 
+		 * 			   not StringBuffer class )
+		 * 
+		 * In Comparable there is only one method: compareTo()
+		 * 
+		 * Internally JVM will call obj.compareTo(obj1) method to sort default/natural sorting.
 		 */
 		
 		System.out.println(treeset); // While printing they don't have any insertion order.
